@@ -1,6 +1,8 @@
 <template>
   <div class="main-page">
-      <header class="header"></header>
+      <header class="header">
+        <div class="back" @click="goBack">《 </div>
+      </header>
       <transition :name="transitionName">
           <router-view class="sub-view"></router-view>
       </transition>
@@ -28,6 +30,11 @@ export default {
     }
     this.$router.isBack = false
     next()
+  },
+  methods: {
+    goBack() {
+      this.$router.goBack()
+    }
   },
   components: {}
 }
