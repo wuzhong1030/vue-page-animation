@@ -1,7 +1,7 @@
 <template>
   <div class="main-page">
       <header class="header">
-        <div class="back" @click="goBack">《 </div>
+        <svg-icon icon-class="back"></svg-icon>
       </header>
       <transition :name="transitionName">
           <router-view class="sub-view"></router-view>
@@ -32,7 +32,7 @@ export default {
     next()
   },
   methods: {
-    goBack() {
+    goBack () {
       this.$router.goBack()
     }
   },
