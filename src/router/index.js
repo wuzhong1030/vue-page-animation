@@ -15,9 +15,10 @@ export default new Router({
       path: '/',
       name: 'MainPage',
       component: MainPage,
+      redirect: '/home',
       children: [
         {
-          path: '',
+          path: '/home',
           component: () => import('../views/Home.vue')
         },
         {

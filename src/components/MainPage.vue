@@ -22,7 +22,6 @@ export default {
   },
   beforeRouteUpdate (to, from, next) {
     let isBack = this.$router.isBack
-    console.log(isBack)
     if (isBack) {
       this.transitionName = 'slide-right'
     } else {
