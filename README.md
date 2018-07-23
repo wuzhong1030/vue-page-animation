@@ -1,6 +1,6 @@
 # vue-page-animation
 
-> 基于vue+vue-router的页面跳转动画的demo
+> 基于vue+vue-router的页面跳转动画的demo, 直接使用vue-cli搭建，没有做过多的改造, 直接clone即用
 
 ## Build Setup
 
