@@ -22,11 +22,11 @@ export default new Router({
         },
         {
           path: '/pageA',
-          component: () => import('../views/PageA.vue')
+          component: () => import('../views/moduelA/PageA.vue')
         },
         {
           path: '/pageB',
-          component: () => import('../views/PageB.vue')
+          component: () => import('../views/moduleB/PageB.vue')
         }
       ]
     }

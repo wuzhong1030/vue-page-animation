@@ -1,9 +1,13 @@
 <template>
   <div class="main-page">
-      <div class="header"></div>
+      <header class="header"></header>
       <transition :name="transitionName">
           <router-view class="sub-view"></router-view>
       </transition>
+      <footer class="footer">
+        <router-link to="/pageA" tag="div">moduleA</router-link>
+        <router-link to="/pageB" tag="div">moduleB</router-link>
+      </footer>
   </div>
 </template>
 
@@ -29,15 +33,31 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .header {
   position: absolute;
+  width: 100%;
   height: 40px;
+  background: #e4cf70;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background: #e4cf70;
+  .tab {
+    color: #827777;
+  }
 }
 .sub-view {
   position: absolute;
+  top: 40px;
+  bottom: 50px;
   width: 100%;
-  height: 100%;
   transition: all 0.5s ease-in-out;
 }
 

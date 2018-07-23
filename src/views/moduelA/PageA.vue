@@ -1,7 +1,6 @@
 <template>
   <div class="page">
       PageA.vue
-      <button @click="goBack">goBack</button>
   </div>
 </template>
 
@@ -14,17 +13,9 @@ export default {
   },
   components: {
 
-  },
-  methods: {
-    goBack () {
-      this.$router.goBack()
-    }
   }
 }
 </script>
 
 <style scoped>
-.page {
-    height: 100vh;
-}
 </style>
