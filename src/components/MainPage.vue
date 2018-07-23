@@ -64,6 +64,7 @@ export default {
   top: 40px;
   bottom: 50px;
   width: 100%;
+  overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
 
