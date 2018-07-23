@@ -10,7 +10,20 @@
 <script type="text/ecmascript-6">
 export default {
   data () {
-    return {}
+    return {
+      transitionName: 'slide-left'
+    }
+  },
+  beforeRouteUpdate (to, from, next) {
+    let isBack = this.$router.isBack
+    console.log(isBack)
+    if (isBack) {
+      this.transitionName = 'slide-right'
+    } else {
+      this.transitionName = 'slide-left'
+    }
+    this.$router.isBack = false
+    next()
   },
   components: {}
 }
@@ -20,21 +33,22 @@ export default {
 .header {
   position: absolute;
   height: 40px;
-  background: #123456;
 }
 .sub-view {
   position: absolute;
-  display: block;
+  width: 100%;
+  height: 100%;
   transition: all 0.5s ease-in-out;
 }
+
 .slide-left-enter,
 .slide-right-leave-avtive {
   opacity: 0;
-  transform: translateX(50px, 0, 0);
+  transform: translate3d(50px, 0, 0);
 }
 .slide-left-leave-active,
 .slide-right-enter {
   opacity: 0;
-  transform: translateX(-50px, 0, 0);
+  transform: translate3d(-50px, 0, 0);
 }
 </style>

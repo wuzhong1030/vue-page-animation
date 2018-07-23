@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-      PageB.vue
+      <router-link to="pageA">to PageA.vue</router-link>
   </div>
 </template>
 
@@ -18,4 +18,8 @@ export default {
 </script>
 
 <style scoped>
+.page {
+    height: 100vh;
+    /* background: #111; */
+}
 </style>
