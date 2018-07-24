@@ -1,5 +1,5 @@
 <template>
-  <svg :class="svgClass" aria-hidden="true">
+  <svg :class="svgClass" aria-hidden="true" @click="handleClick">
     <use :xlink:href="iconName"></use>
   </svg>
 </template>
@@ -16,9 +16,6 @@ export default {
       type: String
     }
   },
-  created () {
-    console.log(this.iconClass)
-  },
   computed: {
     iconName () {
       return `#icon-${this.iconClass}`
@@ -29,6 +26,11 @@ export default {
       } else {
         return 'svg-icon'
       }
+    }
+  },
+  methods: {
+    handleClick() {
+      this.$emit('click')
     }
   }
 }

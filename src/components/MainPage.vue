@@ -1,7 +1,7 @@
 <template>
   <div class="main-page">
       <header class="header">
-        <svg-icon icon-class="back"></svg-icon>
+        <svg-icon icon-class="back" @click="handleBack"></svg-icon>
       </header>
       <transition :name="transitionName">
           <router-view class="sub-view"></router-view>
@@ -31,7 +31,7 @@ export default {
     next()
   },
   methods: {
-    goBack () {
+    handleBack () {
       this.$router.goBack()
     }
   },
@@ -42,6 +42,10 @@ export default {
 <style scoped lang="postcss">
 .header {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
   width: 100%;
   height: 40px;
   background: #e4cf70;
