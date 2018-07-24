@@ -18,4 +18,7 @@ export default {
 </script>
 
 <style scoped>
+.page {
+  background: #654321;
+}
 </style>

@@ -40,46 +40,51 @@ export default {
 </script>
 
 <style scoped lang="postcss">
-.header {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 12px;
-  width: 100%;
-  height: 40px;
-  background: #e4cf70;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-  background: #e4cf70;
-  .tab {
-    color: #827777;
+.main-page {
+  position: relative;
+  height: 100vh;
+  .header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    width: 100%;
+    height: 40px;
+    background: #e4cf70;
   }
-}
-.sub-view {
-  position: absolute;
-  top: 40px;
-  bottom: 50px;
-  width: 100%;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
+  .footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background: #e4cf70;
+    .tab {
+      color: #827777;
+    }
+  }
+  .sub-view {
+    position: absolute;
+    top: 40px;
+    bottom: 50px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .slide-left-enter,
-.slide-right-leave-avtive {
-  opacity: 0;
-  transform: translate3d(50px, 0, 0);
+.slide-right-leave-active {
+  opacity: 1;
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
 }
 .slide-left-leave-active,
 .slide-right-enter {
   opacity: 0;
-  transform: translate3d(-50px, 0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 </style>
